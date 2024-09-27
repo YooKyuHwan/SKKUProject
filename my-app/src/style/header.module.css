@@ -1,0 +1,34 @@
+.div{
+    display: flex;
+    height: 80px;
+    flex-direction: column;
+}
+
+.header_img{
+    height: 80px;
+    flex-grow: 1;
+}
+
+.header_div{
+   flex-grow: 100;
+}
+
+.header_div h1{
+    color: white;
+}
+
+.item:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    border: solid;
+    border-color: rgb(7, 46, 4);
+    background-color: rgb(7, 63, 5);
+    border-width: 3px;
+}
+
+.item{
+    align-self: auto;
+}

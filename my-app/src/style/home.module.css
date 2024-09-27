@@ -1,0 +1,13 @@
+.home_div {
+    display: flex;
+    justify-content: center;
+}
+
+.item{
+    display: flex;   
+    flex-direction: column;
+}
+
+.item:nth-child(1){
+    text-align: left;
+}
