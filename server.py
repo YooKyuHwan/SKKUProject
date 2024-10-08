@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, make_response
 import csv
 import pandas as pd
 
@@ -16,8 +16,19 @@ def getTeamStatBySeason():
     team = request.args.get('team')
     fileName = team + '_' + season + '.csv'
     data = pd.read_csv(fileName, header=0)
+    data = data.fillna(value=0)
+
     json_data = data.to_dict(orient='records')
-    return jsonify(json_data)
+    response = make_response(jsonify(json_data))
+    
+    #CORS 해결 위한 헤더 추가
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+
+    print(response)
+
+    return response
 
 
 @app.route('/api/data', methods=['GET'])
