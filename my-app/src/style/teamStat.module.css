@@ -1,0 +1,25 @@
+.tableDiv{
+    width: 95%;
+    height: 800px;
+    border: 5px solid #0000002c;
+    overflow: scroll;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.th{
+    text-emphasis: bold;
+    font-size: 20px;
+    color: rgb(12, 43, 12);
+    border: 2px solid rgb(12, 43, 12);
+    margin:  0;
+    padding: 0;
+}
+
+.ps{
+    border-bottom: 1px solid black;
+}

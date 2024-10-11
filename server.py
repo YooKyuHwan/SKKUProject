@@ -18,6 +18,28 @@ def getTeamStatBySeason():
     data = pd.read_csv(fileName, header=0)
     data = data.fillna(value=0)
 
+    selected_columns = ['player', 
+                        'nationality', 
+                        'age',
+                        'position',
+                        'games',
+                        'games_starts',
+                        'minutes',
+                        'goals',
+                        'assists',
+                        'goals_assists',
+                        'goals_per90',
+                        'assists_per90',
+                        'goals_pens',
+                        'pens_att',
+                        'pens_made',
+                        'cards_yellow',
+                        'cards_red',
+                        'xg',
+                        'xg_assist',
+                        'xg_per90',
+                        'xg_assist_per90']
+    data = data[selected_columns]
     json_data = data.to_dict(orient='records')
     response = make_response(jsonify(json_data))
     
@@ -25,8 +47,6 @@ def getTeamStatBySeason():
     response.headers['Access-Control-Allow-Origin'] = '*'
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-
-    print(response)
 
     return response
 
