@@ -3,7 +3,7 @@ import category from "../assets/category";
 import styles from "../style/playerStat.module.css"
 
 function PlayerStat(props){
-    
+
     return (
         <tr>
             {category.map((item) => (

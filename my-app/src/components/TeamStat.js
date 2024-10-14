@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import PlayerStat from "./PlayerStat";
 import category from "../assets/category";
 import styles from "../style/teamStat.module.css";
@@ -15,6 +15,11 @@ function TeamStat(props){
         <div className={styles.container}>
             <h1>HELLO TEAM : {team}</h1>
             
+            <div className={styles.d3div}>
+                <Link to='/barchart' state={{data: teamStat}}><h3>Barchart</h3></Link>
+                <h3>LineChart</h3>
+            </div>
+
             <div className={styles.tableDiv}>
                 <table>
                     <tr>

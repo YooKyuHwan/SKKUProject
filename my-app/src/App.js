@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header';
 import TeamStat from './components/TeamStat';
+import BarChart from './components/BarChart';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/team/stat' element={<TeamStat></TeamStat>}></Route>
+          <Route path='/barchart' element={<BarChart></BarChart>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

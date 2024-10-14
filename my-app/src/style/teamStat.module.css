@@ -23,3 +23,11 @@
 .ps{
     border-bottom: 1px solid black;
 }
+
+.d3div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    width: 100%;
+}

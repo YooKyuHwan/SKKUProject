@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import styles from '../style/home.module.css';
 
-
 function Home(){
     const navigate = useNavigate();
     const [team, setTeam] = useState('');
@@ -34,7 +33,6 @@ function Home(){
             //console.log(JSON.stringify(data));
             setLoading(false);
 
-            console.log("log: " + typeof(data));
             url = "/team/stat?team=" + team + "&" + "season=" + season;
             navigate(url, {state: {teamStat : data}});
         } catch(error){
