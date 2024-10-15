@@ -16,7 +16,7 @@ function TeamStat(props){
             <h1>HELLO TEAM : {team}</h1>
             
             <div className={styles.d3div}>
-                <Link to='/barchart' state={{data: teamStat}}><h3>Barchart</h3></Link>
+                <Link to='/barchart' state={{data: teamStat, team: team}}><h3>Barchart</h3></Link>
                 <h3>LineChart</h3>
             </div>
 
@@ -29,7 +29,7 @@ function TeamStat(props){
                     </tr>
 
                     {teamStat.map((item) => (
-                        <PlayerStat stat={item} className={styles.ps}></PlayerStat>
+                        <PlayerStat stat={item} team={team} className={styles.ps}></PlayerStat>
                     ))}
                     
                 </table>

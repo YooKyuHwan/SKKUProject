@@ -4,6 +4,8 @@ import Home from './components/Home';
 import Header from './components/Header';
 import TeamStat from './components/TeamStat';
 import BarChart from './components/BarChart';
+import HexagonalChart from './components/PlayerChart';
+import PlayerChart from './components/PlayerChart';
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/team/stat' element={<TeamStat></TeamStat>}></Route>
           <Route path='/barchart' element={<BarChart></BarChart>}></Route>
+          <Route path='/playerchart' element={<PlayerChart></PlayerChart>}></Route>
         </Routes>
       </BrowserRouter>
     </div>

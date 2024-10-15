@@ -6,8 +6,7 @@ function BarChart(){
     const svgRef = useRef();
 
     const location = useLocation();
-    const {data} = location.state || {}
-    //console.log(data);
+    const {data, team} = location.state|| {}
 
     useEffect(()=>{
         const svg = d3.select(svgRef.current);
@@ -53,6 +52,8 @@ function BarChart(){
 
     return(
         <div >
+            <h1>{team}</h1>
+            <h1>Goals per Player</h1>
             <svg ref={svgRef} width={1500} height={1000}></svg>
         </div>
     );
