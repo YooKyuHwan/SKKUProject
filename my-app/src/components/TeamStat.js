@@ -17,7 +17,6 @@ function TeamStat(props){
             
             <div className={styles.d3div}>
                 <Link to='/barchart' state={{data: teamStat, team: team}}><h3>Barchart</h3></Link>
-                <h3>LineChart</h3>
             </div>
 
             <div className={styles.tableDiv}>
